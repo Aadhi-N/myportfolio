@@ -1,8 +1,8 @@
 {
-  "name": "my-gatsby-site",
+  "name": "portfolio-site",
   "version": "1.0.0",
   "private": true,
-  "description": "My Gatsby Site",
+  "description": "My Portfolio",
   "author": "Aadhi-N",
   "keywords": [
     "gatsby"
@@ -15,9 +15,16 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "bulma": "^0.9.2",
     "gatsby": "^3.6.2",
     "gatsby-plugin-gatsby-cloud": "^2.7.1",
+    "gatsby-plugin-image": "^1.7.1",
+    "gatsby-plugin-sass": "^4.7.1",
+    "gatsby-plugin-sharp": "^3.7.1",
+    "gatsby-source-filesystem": "^3.7.1",
+    "gatsby-transformer-sharp": "^3.7.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "sass": "^1.35.1"
   }
 }
