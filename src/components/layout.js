@@ -1,46 +1,45 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText
-} from './layout.module.css'
-import "../styles/mystyles.scss";
+import { StaticImage } from "gatsby-plugin-image";
+
+import "../styles/bulma-custom.scss";
+import {heroContainer, lazy, heroTitle, heroSubtitle, name, heroText} from "../styles/custom.module.scss";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <main className={container}>
-      <title>{pageTitle}</title>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/portfolio" className={navLinkText}>
-              Portfolio
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/contact" className={navLinkText}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+
+    <section className="hero is-fullheight">
+      <div className="hero-body" id={heroContainer}>
+        <div className="container has-text-centered" id={heroText}>
+          <p className="title is-size-1" id={heroTitle}>
+            Hello, I'm <span id={name}>Aadhilah Nizamdeen</span>.
+          </p>
+          <p className="subtitle is-size-3" id={heroSubtitle}>
+            I'm a full-stack web developer. 
+          </p>
+        </div>
+      </div>
+
+      <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+          <a class="navbar-item">
+            Portfolio
+          </a>
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+        </div>
+      </div>
       </nav>
-      <h1 className={heading}>{pageTitle}</h1>
-      {children}
-    </main>
+    </section>
   )
 }
 
 export default Layout
+
