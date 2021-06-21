@@ -1,26 +1,20 @@
 import * as React from 'react';
-import { Helmet } from "react-helmet";
 import Navbar from "./navbar.js";
+import NavbarBurger from "./navbar-burger.js";
 // import Footer from "./footer.js";
 
 import {heroContainer, lazy, heroTitle, heroSubtitle, name, heroText, myContent, myContent1} from "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
 // import "../scripts/script.js";
 
+
+
 const Layout = ({ pageTitle, children }) => {
 
+    
   return (
     <div>
-      <nav className="navbar is-hidden-desktop" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <a role="button" className="navbar-burger" onClick={handleNavBurger} aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        
-      </nav>
+      <NavbarBurger></NavbarBurger>
       <section className="hero is-fullheight">
         <div className="hero-body" id={heroContainer}>
           <div className="container has-text-centered" id={heroText}>
