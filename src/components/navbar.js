@@ -1,12 +1,17 @@
 import * as React from 'react'
 
 import "../styles/bulma-custom.scss";
+import {myContent1} from "../styles/custom.module.scss";
 
 const Navbar = () => {
+  const handleClick = () => {
+    console.log('iwasclicked');
+  }
+
   return (
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
+    <nav className="navbar is-hidden-touch" role="navigation" aria-label="main navigation">
+      <div className="navbar-menu">
         <div className="navbar-start">
           <a className="navbar-item">
             Home
@@ -22,12 +27,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
       </div>
+      
     </nav>
     
     
