@@ -30,7 +30,7 @@
 import React from "react"
 import Layout from '../components/layout'
 
-import "../styles/bulma-custom.scss"
+// import "../styles/bulma-custom.scss"
 
 const IndexPage = () => {
   return (
