@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import {navBurger, burgerLine} from "../styles/custom.module.scss";
+import {navBurger} from "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
 
 class NavbarBurger extends Component {
@@ -9,7 +9,6 @@ class NavbarBurger extends Component {
     this.state = { active: false };
   }
   handleClick = () => {
-    console.log('e', this.state.active)
     this.setState({ active: !this.state.active });
    };
   render() {
@@ -35,18 +34,18 @@ class NavbarBurger extends Component {
         </div>
 
         <div 
-          className={"navbar-dropdown px-5 pb-5" + (this.state.active ? " is-hidden " : " ")}
+          className={"navbar-dropdown px-5 pb-5" + (this.state.active ? "  " : " is-hidden ")}
         >
-          <a class="navbar-item" id={navBurger}>
+          <a className="navbar-item" id={navBurger} href="/">
             Home
           </a>
-          <a class="navbar-item" id={navBurger}>
+          <a className="navbar-item" id={navBurger} href="/portfolio">
             Portfolio
           </a>
-          <a class="navbar-item" id={navBurger}>
+          <a className="navbar-item" id={navBurger} href="/about">
             About
           </a>
-          <a class="navbar-item" id={navBurger}>
+          <a className="navbar-item" id={navBurger} href="/contact">
             Contact
           </a>
         </div>

@@ -1,12 +1,38 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import {aboutContainer, aboutContent} from "../styles/custom.module.scss";
+import profilePic from "../images/profile_pic.jpeg";
 
 const AboutPage = () => {
   return (
-    <Layout pageTitle="About Me">
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
-    </Layout>
+    <>
+      <div className="hero is-medium" id={aboutContainer}>
+        <div className="hero body">
+          <h1 className="title is-1 has-text-centered pt-6 pb-5 is-underlined has-text-weight-bold">ABOUT</h1>
+          <div className="container" id={aboutContent}>
+            <div className="columns p-5">
+              <div className="column is-one-fifth">
+                <figure className="image">
+                  <img className="is-rounded" src={profilePic}/>
+                </figure>
+              </div>
+              <div className="column is-four-fifths p-5">
+                <div className="title pt-5">
+
+                  Hello! My name is Aadhilah, and I enjoy web development. 
+                </div>
+                <h4 className="subtitle is-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+
+                </h4>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </>
   )
 }
 
-export default AboutPage
+export default AboutPage;

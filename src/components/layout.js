@@ -1,19 +1,23 @@
 import * as React from 'react';
+import { Link } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Navbar from "./navbar.js";
 import NavbarBurger from "./navbar-burger.js";
-// import Footer from "./footer.js";
+import PortfolioPage from '../pages/portfolio.js';
+import AboutPage from '../pages/about.js';
+import ContactPage from '../pages/contact.js';
+import Footer from "./footer.js";
 
-import {heroContainer, lazy, heroTitle, heroSubtitle, name, heroText, myContent, myContent1} from "../styles/custom.module.scss";
+import {heroContainer, heroTitle, heroSubtitle, name, heroText} from "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
-// import "../scripts/script.js";
 
 
-
-const Layout = ({ pageTitle, children }) => {
+const Layout = () => {
 
     
   return (
-    <div>
+    <main>
       <NavbarBurger></NavbarBurger>
       <section className="hero is-fullheight">
         <div className="hero-body" id={heroContainer}>
@@ -24,11 +28,27 @@ const Layout = ({ pageTitle, children }) => {
             <p className="subtitle is-size-3" id={heroSubtitle}>
               I'm a full-stack web developer. 
             </p>
+            
+            
+            <div className="view-work p-5">
+              <Link to="/portfolio">
+                <button className="button is-danger is-outlined is-medium">
+                  <span>View my work</span>
+                  <span className="icon is-medium">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </span>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
       <Navbar></Navbar>
-    </div>
+      <PortfolioPage></PortfolioPage>
+      <AboutPage></AboutPage>
+      <ContactPage></ContactPage>
+      <Footer></Footer>
+    </main>
 
   )
 }

@@ -39,3 +39,42 @@
   font-weight: 400;
   font-size: large;
 }
+
+
+#portfolio-container {
+  background-color:hsl(0, 0%, 96%);
+}
+
+#portfolio-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: large;
+}
+
+#parent-tile {
+  background-image: url("https://bulma.io/images/placeholders/640x480.png");
+}
+
+#about-container {
+  background-color:hsl(0, 0%, 100%);
+}
+
+#about-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: large;
+}
+
+#about-content {
+  padding: 0rem 5rem;
+}
+
+#contact-container {
+  background-color:hsl(203, 49%, 33%);
+}
+
+#contact-title {
+  color: white;
+}
+
+#social-icons {
+  justify-content: center;
+}
