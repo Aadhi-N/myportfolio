@@ -78,3 +78,42 @@
 #social-icons {
   justify-content: center;
 }
+
+#icon-email:hover {
+  filter: contrast(0%)
+}
+
+#icon-linkedin:hover {
+  filter: invert(40%)
+};
+
+/* On desktop and fullHD, change icon sizes */
+@media screen and (min-width: 1024px) {
+  #icon-email {
+    filter: brightness(1000%);
+    // padding-bottom: 1rem;
+  }
+  
+  #icon-linkedin {
+    filter: brightness(650%);
+    width: 80%;
+    padding-top: 0.3rem;
+  }
+  
+}
+
+/* On mobile and tablet, change icon sizes */
+@media screen and (max-width: 1024px) {
+  #icon-email {
+    width: 50%;
+    filter: brightness(1000%);
+    // padding-bottom: 1rem;
+  }
+  
+  #icon-linkedin {
+    filter: brightness(650%);
+    width: 60%;
+    padding-top: 1rem;
+  }
+  
+}

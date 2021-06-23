@@ -1,10 +1,10 @@
 import * as React from 'react'
+import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import {contactContainer, contactTitle, socialIcons, iconEmail, iconLinkedin} from "../styles/custom.module.scss";
 
-import { faLifeRing } from '@fortawesome/free-solid-svg-icons';
-import {contactContainer, contactTitle, socialIcons} from "../styles/custom.module.scss";
-import emailIcon from "../images/v.png";
-import linkedinIcon from "../images/d.png";
+import linkedinIcon from "../images/linkedin_icon.png";
 
 const ContactPage = () => {
   return (
@@ -14,12 +14,22 @@ const ContactPage = () => {
         <h1 className="title is-1 has-text-centered pt-6 pb-5 is-underlined has-text-weight-bold" id={contactTitle}>CONTACT</h1>
         <h4 className="subtitle is-4 has-text-centered pb-5" id={contactTitle}>You can get in touch with me through LinkedIn or email.</h4>
         <div className="is-flex" id={socialIcons}>
-          <figure className="image is-128x128">
-            <img className="is-rounded" src={emailIcon}/>
-          </figure>
-          <figure className="image is-128x128">
-            <img className="is-rounded" src={linkedinIcon}/>
-          </figure>
+          <div class="columns is-gapless is-multiline">
+            <div class="column">
+              <a href="mailto:aadhilah.nizamdeen@gmail.com?subject=Contacting you from your portfolio page!">
+                <figure className="image is-128x128">
+                  <FontAwesomeIcon icon={faEnvelopeSquare} size="6x" id={iconEmail}/>
+                </figure>
+              </a>
+            </div>
+            <div class="column">
+              <a href="https://linkedin.com/aadhilahnizamdeen">
+                <figure className="image is-128x128">
+                  <img className="is-squared" id={iconLinkedin} src={linkedinIcon}/>
+                </figure>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
      </section>
