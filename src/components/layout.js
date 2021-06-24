@@ -45,7 +45,21 @@ const Layout = () => {
         </div>
       </section>
       <Navbar></Navbar>
-      <PortfolioPage></PortfolioPage>
+      <PortfolioPage 
+        portfolioNav={[
+          {name: "All", index: 0},
+          {name: "NodeJS/Javascript", index: 1},
+          {name: "Ruby/Rails", index: 2},
+          {name: "React", index: 3},
+          {name: "Angular", index: 4}]}
+        portfolioItems={[
+          {name: "JS", index: 0, tag: 1},
+          {name: "JS", index: 1, tag: 1},
+          {name: "Ruby/Rails", index: 2, tag: 2},
+          {name: "React", index: 3, tag: 3},
+          {name: "Angular", index: 4, tag: 4},
+          {name: "Angular", index: 5, tag: 4}]}>
+      </PortfolioPage>
       <AboutPage></AboutPage>
       <ContactPage></ContactPage>
       <Footer></Footer>
