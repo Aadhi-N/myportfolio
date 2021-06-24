@@ -1,21 +1,32 @@
 import React, {Component} from 'react';
 
-import {portfolioContainer, tilesContainer  } from "../styles/custom.module.scss";
-
+import {portfolioContainer, tilesContainer, portfolioTileChild, portfolioIcon, portfolioDetails, btn } from "../styles/custom.module.scss";
+// import screenshot from "../images/screenshot.jpg";
 
 class PortfolioPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeTab: 0 };
-
+    this.state = { 
+      activeTab: 0,
+      activeTile: false,
+      activeProject: null,
+    };
     this.handleClickActiveTab = this.handleClickActiveTab.bind(this);
   };
 
   /* Set tab active state */
-  handleClickActiveTab(e) {
-    const newActiveTab = e;
-    this.setState({ activeTab : newActiveTab,})
+  handleClickActiveTab(index) {
+    const newActiveTab = index;
+    this.setState({ activeTab : newActiveTab})
   };
+
+  handleTileHover = (index) => {
+    const newActiveProject = index;
+    this.setState(prevState => ({
+      activeTile: !prevState.activeTile,
+      activeProject: index
+    }));  
+  }
 
   /* Render portfolio navbar */
   getPortfolioNav() {
@@ -36,6 +47,8 @@ class PortfolioPage extends Component {
       acc[index] = [...(acc[index] || []), currVal];
       return acc;
     }, []);
+    console.log('icon', items)
+
     
     // Call group function to render tiles 
     let listItems = (
@@ -43,12 +56,29 @@ class PortfolioPage extends Component {
           {group(items, 3).map(children =>
             <div className="tile is-ancestor">
               {children.map((item, index) =>  
-                <div className={"tile is-parent" + (this.state.activeTab == item.tag || this.state.activeTab == 0 ? " " : " is-hidden")}>          
-                  <article className="tile is-child box">
+                <div className={"tile is-parent" + (this.state.activeTab == item.tag || this.state.activeTab == 0 ? " " : " is-hidden")}>
+                  <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => this.handleTileHover(item.index)} onMouseLeave={this.handleTileHover}>
+                  {this.state.activeTile && this.state.activeProject == item.index ? 
+                  <span id={portfolioDetails}>
                     <p className="title">{item.name}</p>
-                    <p className="subtitle">Subtitle</p>
-                  </article>
-                </div>)}
+                    <p className="subtitle">{item.lang}</p>
+                    <p className="subtitle">{item.desc}</p>
+                    <span id={btn}>
+                      <button className="button is-danger is-outlined is-small">
+                        LEARN MORE
+                      </button>
+                    </span>
+                  </span>
+                  :
+                  <>
+                  
+                  <figure className="image is-5by4">
+                    <img src={item.icon} id={portfolioIcon}/>
+                  </figure>
+                  </>
+                  }          
+                  
+                  </article> </div>)}
             </div>
           )}
         </div>
@@ -56,43 +86,28 @@ class PortfolioPage extends Component {
     return listItems;
   };
 
+  
+  
+  
+  
   render() {
+    const test = <p>hello</p>
     return (
       <div id="portfolio">
         <div className="hero is-medium pt-6" id={portfolioContainer}>
           <div className="hero body">
-  
             <h1 className="title is-1 has-text-centered pt-6 is-underlined has-text-weight-bold">PROJECTS</h1>
             <div className="container pb-6">
               <div className="tabs is-centered is-medium is-boxed">
                 <ul>{this.getPortfolioNav()}</ul>
               </div>
-
-              
-
             </div>
-            <div className="container is-fluid" id={tilesContainer}>{this.getPortfolioItems()}
-              </div>
+            <div className="container is-fluid" id={tilesContainer}>{this.getPortfolioItems()}</div>
           </div>
         </div>
       </div>
-
     )
   }
-}
+};
 
 export default PortfolioPage;
-
-
-
-
-// <li className={this.state.activeTab == 0 ? "is-active" : " "}><a onClick= 
-//             {() => this.handleClickActiveTab(0)}>All</a></li>
-//                   <li className={this.state.activeTab == 1 ? "is-active" : " "}><a onClick= 
-//             {() => this.handleClickActiveTab(1)}>NodeJs/Javascript</a></li>
-//                   <li className={this.state.activeTab == 2 ? "is-active" : " "}><a onClick= 
-//             {() => this.handleClickActiveTab(2)}>Ruby/Rails</a></li>
-//                   <li className={this.state.activeTab == 3 ? "is-active" : " "}><a onClick= 
-//             {() => this.handleClickActiveTab(3)}>React</a></li>
-//                   <li className={this.state.activeTab == 4 ? "is-active" : " "}><a onClick= 
-//             {() => this.handleClickActiveTab(4)}>Angular</a></li>

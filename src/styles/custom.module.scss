@@ -1,6 +1,12 @@
 @charset "utf-8";
 // @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 
+#navbar {
+  border-style: none none solid none;
+  border-width: 3px;
+  border-color: hsl(350, 68%, 60%);
+}
+
 .lazy {
   background-image: none;
   background-color: #F1F1FA;
@@ -25,7 +31,6 @@
 
 #hero-subtitle {
   color: #22223B;
-  // font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
 
@@ -35,7 +40,6 @@
 }
 
 #nav-burger {
-  // font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   font-size: large;
 }
@@ -58,17 +62,94 @@
   background-image: url("https://bulma.io/images/placeholders/640x480.png");
 }
 
+//Disables onMouseLeave in child context of tile containers
+#portfolio-tile-child * {
+  pointer-events: none;
+}
+
+#portfolio-icon {
+  animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -o-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+#portfolio-details * {
+  animation: move-up 0.5s linear;
+  -webkit-animation: move-up 0.5s;
+  -moz-animation: move-up 0.5s;
+  -o-animation: move-up 0.5s;
+  -ms-animation: move-up 0.5s;
+}
+
+@keyframes move-up {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 50px;
+  }
+}
+            
+@-webkit-keyframes move-up {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 50px;
+  }
+};
+
+// #btn {
+//   width: 10px;
+// }
+
 #about-container {
   background-color:hsl(0, 0%, 100%);
 }
 
 #about-title {
-  // font-family: 'Ubuntu', sans-serif;
   font-size: large;
 }
 
 #about-content {
   padding: 0rem 5rem;
+};
+
+#about-text {
+  font-weight: 500;
+}
+
+#about-subtext {
+  color:hsl(350, 68%, 60%);
+  font-weight: 700;
 }
 
 #contact-container {
@@ -95,13 +176,14 @@
 @media screen and (min-width: 1024px) {
   #icon-email {
     filter: brightness(1000%);
-    // padding-bottom: 1rem;
+    width: 100px;
   }
   
   #icon-linkedin {
     filter: brightness(650%);
-    width: 80%;
-    padding-top: 0.3rem;
+    width: 116px;
+    padding-left: 10px;
+    padding-top: 0.4rem;
   }
   
 }

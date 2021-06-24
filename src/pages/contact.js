@@ -14,16 +14,16 @@ const ContactPage = () => {
         <h1 className="title is-1 has-text-centered pt-6 pb-5 is-underlined has-text-weight-bold" id={contactTitle}>CONTACT</h1>
         <h4 className="subtitle is-4 has-text-centered pb-5" id={contactTitle}>You can get in touch with me through LinkedIn or email.</h4>
         <div className="is-flex" id={socialIcons}>
-          <div class="columns is-gapless is-multiline">
+          <div class="columns is-multiline">
             <div class="column">
               <a href="mailto:aadhilah.nizamdeen@gmail.com?subject=Contacting you from your portfolio page!">
-                <figure className="image is-128x128">
+                <figure className="image">
                   <FontAwesomeIcon icon={faEnvelopeSquare} size="6x" id={iconEmail}/>
                 </figure>
               </a>
             </div>
             <div class="column">
-                <figure className="image is-128x128">
+                <figure className="image">
                   <a href="https://linkedin.com/aadhilahnizamdeen">
                   <img className="is-squared" id={iconLinkedin} src={linkedinIcon}/>
                    </a>
