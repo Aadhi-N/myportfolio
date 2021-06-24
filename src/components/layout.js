@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Link } from "gatsby";
+
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Navbar from "./navbar.js";
@@ -8,6 +10,7 @@ import PortfolioPage from '../pages/portfolio.js';
 import AboutPage from '../pages/about.js';
 import ContactPage from '../pages/contact.js';
 import Footer from "./footer.js";
+import Search from "../pages/test.js";
 
 import {heroContainer, heroTitle, heroSubtitle, name, heroText} from "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
@@ -19,7 +22,7 @@ const Layout = () => {
   return (
     <main>
       <NavbarBurger></NavbarBurger>
-      <section className="hero is-fullheight">
+      <section className="hero is-fullheight" id="home">
         <div className="hero-body" id={heroContainer}>
           <div className="container has-text-centered" id={heroText}>
             <p className="title is-size-1" id={heroTitle}>
@@ -31,14 +34,12 @@ const Layout = () => {
             
             
             <div className="view-work p-5">
-              <Link to="/portfolio">
-                <button className="button is-danger is-outlined is-medium">
-                  <span>View my work</span>
-                  <span className="icon is-medium">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                  </span>
-                </button>
-              </Link>
+              <button className="button is-danger is-outlined is-medium" onClick={() => scrollTo('#portfolio')}>
+                <span>View my work</span>
+                <span className="icon is-medium">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -48,10 +49,11 @@ const Layout = () => {
       <AboutPage></AboutPage>
       <ContactPage></ContactPage>
       <Footer></Footer>
+      <Search></Search>
     </main>
 
   )
 }
 
-export default Layout
+export default Layout;
 

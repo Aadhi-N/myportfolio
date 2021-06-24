@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import "../styles/bulma-custom.scss";
+import {footerIcon} from "../styles/custom.module.scss";
+import arrowUp from "../images/arrow_up.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
-        <span className="icon is-large">
-          <FontAwesomeIcon icon={faChevronCircleUp} />
+        <span className="footer-icon" >
+          <a>
+          <img src={arrowUp} id={footerIcon} onClick={() => scrollTo('#home')}/>
+          </a>
         </span>
         <p>
-          <strong>Aadhilah Nizamdeen</strong>&copy;2021
+          <strong>Aadhilah Nizamdeen</strong> &copy;2021
         </p>
       </div>
     </footer>

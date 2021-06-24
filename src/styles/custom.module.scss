@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 
 .lazy {
   background-image: none;
@@ -15,7 +15,7 @@
 };
 
 #hero-text {
-  font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
 };
 
 #hero-title {
@@ -25,7 +25,7 @@
 
 #hero-subtitle {
   color: #22223B;
-  font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
 
@@ -35,7 +35,7 @@
 }
 
 #nav-burger {
-  font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   font-size: large;
 }
@@ -59,7 +59,7 @@
 }
 
 #about-title {
-  font-family: 'Ubuntu', sans-serif;
+  // font-family: 'Ubuntu', sans-serif;
   font-size: large;
 }
 
@@ -116,4 +116,12 @@
     padding-top: 1rem;
   }
   
+};
+
+#footer-icon {
+  color: hsl(350, 68%, 60%);
+  width: 80px;
+  position: relative;
+  top: -85px;
+  z-index: 99;
 }

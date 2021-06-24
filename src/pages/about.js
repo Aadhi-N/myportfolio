@@ -4,7 +4,7 @@ import profilePic from "../images/profile_pic.jpeg";
 
 const AboutPage = () => {
   return (
-    <>
+    <div id="about">
       <div className="hero is-medium" id={aboutContainer}>
         <div className="hero body">
           <h1 className="title is-1 has-text-centered pt-6 pb-5 is-underlined has-text-weight-bold">ABOUT</h1>
@@ -31,7 +31,7 @@ const AboutPage = () => {
 
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
