@@ -1,4 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import { useInView } from "react-intersection-observer";
+
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import "../styles/bulma-custom.scss";
@@ -9,11 +11,11 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      activeTab: 0,
-      activeTile: false,
-      activeProject: null,
+      activeTab: null,
+      
     };
     this.handleClickActiveTab = this.handleClickActiveTab.bind(this);
+    console.log('IN NAV', this.props.inView)
   };
 
   /* Set tab active state */
@@ -21,16 +23,25 @@ class Navbar extends Component {
     const newActiveTab = index;
     this.setState({ activeTab : newActiveTab})
   };
+
+  // activeTab() {
+  //   if (inView) {
+  //     return 1;
+  //   } else if (inView2 && !inView) {
+  //     return 2;
+  //   }
+  // }
+
   render() {
     return (
       <>
       <nav className="navbar is-hidden-touch is-fixed-top" id={navbar} role="navigation" aria-label="main navigation">
         <div className="navbar-menu ml-5">
           <div className="navbar-start">
-            <a className="navbar-item" onClick={() => scrollTo('#home')}>
+            <a className={"navbar-item" + (this.state.activeTab == 0 ? " is-active" : " ")} onClick={() => {scrollTo('#home'); this.handleClickActiveTab(0)}}>
               Home
             </a>
-            <a className="navbar-item" onClick={() => scrollTo('#portfolio')}>
+            <a className={"navbar-item"} onClick={() => {scrollTo('#portfolio')}}>
               Portfolio
             </a>
             <a className="navbar-item" onClick={() => scrollTo('#about')}>
@@ -40,9 +51,7 @@ class Navbar extends Component {
               Contact
             </a>
           </div>
-  
         </div>
-        
       </nav>
       </>
     )

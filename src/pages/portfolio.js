@@ -47,8 +47,6 @@ class PortfolioPage extends Component {
       acc[index] = [...(acc[index] || []), currVal];
       return acc;
     }, []);
-    console.log('icon', items)
-
     
     // Call group function to render tiles 
     let listItems = (
@@ -91,12 +89,16 @@ class PortfolioPage extends Component {
   
   
   render() {
-    const test = <p>hello</p>
     return (
       <div id="portfolio">
         <div className="hero is-medium pt-6" id={portfolioContainer}>
           <div className="hero body">
             <h1 className="title is-1 has-text-centered pt-6 is-underlined has-text-weight-bold">PROJECTS</h1>
+            {this.props.inView ? 
+              <button className="is-large">hey</button> :
+              <button className="is-large">NOPE</button>
+            }
+            
             <div className="container pb-6">
               <div className="tabs is-centered is-medium is-boxed">
                 <ul>{this.getPortfolioNav()}</ul>

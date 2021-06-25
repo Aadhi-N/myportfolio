@@ -6,9 +6,11 @@
 $body-family: 'Ubuntu', sans-serif; 
 $title-color: #22223b;
 $navbar-background-color: hsl(203, 49%, 33%);
-$navbar-item-hover-background-color: hsl(213, 28%, 67%);
+$navbar-item-hover-background-color: hsl(350, 68%, 60%);
 $navbar-item-color: hsl(0, 0%, 100%);
 $navbar-item-hover-color: hsl(0, 0%, 100%);
+$navbar-item-active-color: hsl(0, 0%, 100%);
+$navbar-item-active-background-color: hsl(350, 68%, 60%);
 $footer-background-color: hsl(0, 0%, 96%);
 $footer-padding: 3rem 1.5rem 6rem;
 $tabs-link-hover-color: hsl(0, 0%, 100%);

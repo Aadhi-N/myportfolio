@@ -211,3 +211,15 @@
   top: -85px;
   z-index: 99;
 }
+
+
+header {
+  position: fixed;
+  top: 50;
+  transition: box-shadow .3s ease;
+  width: 100%;
+
+  &[data-active='true'] {
+    box-shadow: 0 2px 8px rgba(152,168,188,.2);
+  }
+}
