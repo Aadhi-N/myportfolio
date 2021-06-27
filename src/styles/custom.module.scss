@@ -218,3 +218,25 @@ header {
     box-shadow: 0 2px 8px rgba(152,168,188,.2);
   }
 }
+
+#modal-subtitle {
+  border-bottom: 1px solid #bbb;
+}
+
+#link-text {
+  color: hsl(0, 5%, 9%);
+}
+
+#link-text:hover {
+  color: hsl(218, 68%, 52%)
+}
+
+#external-link-icon {
+  color: hsl(0, 5%, 9%);
+  margin-right: 1rem;
+}
+
+#github-icon {
+  width: 40px;
+  margin-right: 1rem;
+}

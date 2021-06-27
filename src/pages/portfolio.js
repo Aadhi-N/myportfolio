@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
 import Layout from "../components/layout.js";
+import Header from './test.js';
+import PortfolioModal from './portfolio-modal.js';
 
 import {portfolioContainer, tilesContainer, portfolioTileParent, portfolioTileChild, portfolioIcon, portfolioDetails, learnmoreBtn, d } from "../styles/custom.module.scss";
 
@@ -8,6 +10,7 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
   const [activeTab, setActiveTab] = useState(" ");
   const [activeTile, setActiveTile] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
+  const [modalDetails, setModalDetails] = useState(" ");
   const [activeModal, setActiveModal] = useState(false);
 
 
@@ -33,9 +36,10 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
     return listNav;
   };
 
-  function toggleModal() {
-    console.log('test')
+  function toggleModal(item) {
     setActiveModal(prevActiveModal => !prevActiveModal);
+    setModalDetails(prevModalDetails => prevModalDetails = item);
+    console.log('item', item)
   }
 
   /* Render portfolio tiles */
@@ -60,7 +64,7 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
 
               {children.map((item, index) =>  
                 <a><div className={"tile is-parent" + (activeTab == item.tag || activeTab == 0 ? " " : " is-hidden")} id={portfolioTileParent}>
-                  <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item.index)} onClick={toggleModal} >
+                  <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item.index)} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
                   {activeTile && activeProject == item.index ? 
                   <div id={d}>
                     <p className="title" id={portfolioDetails}>{item.name}</p>
@@ -104,39 +108,7 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
 
 
         {/* modal start */}
-          <div className={"modal" + (!activeModal ? " is-active" : " ")}>
-
-          <div class="modal-background"></div>
-          <div class="modal-content">
-            <p class="image">
-              <img src="https://bulma.io/images/placeholders/1280x960.png" alt=""/>
-            </p>
-          
-            <div class="modal-card-body">
-              
-              <p className="modal-card-title">Modal title</p>
-              <p className="modal-card-subtitle">Modal title</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    VIEW SITE
-                  </span>
-                </p>
-                <p class="card-footer-item">
-                  <span>
-                    GITHUB
-                  </span>
-                </p>
-              </footer>
-
-
-            </div>
-          </div>
-        <button class="modal-close is-large" aria-label="close"></button>
-
-        </div>
+          <PortfolioModal activeModal={activeModal} modalDetails={modalDetails} toggleModal={(e) => toggleModal(e)}/>
         {/* modal end */}
 
           
