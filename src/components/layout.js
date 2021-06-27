@@ -20,7 +20,7 @@ import screenshot2 from "../images/screenshot2.jpg";
 
 
 
-const Layout = () => {
+const Layout = ({children}) => {
 
 
   const [ref, inView ] = useInView({
@@ -34,7 +34,12 @@ const Layout = () => {
       <NavbarBurger/>
       <Hero />
       <Search/>
-      <Navbar />
+      <Navbar navbarItems={[
+        {name: "home", index: 0},
+        {name: "portfolio", index: 1},
+        {name: "about", index: 2},
+        {name: "contact", index: 3},
+      ]}/>
       <PortfolioPage 
         portfolioNav={[
           {name: "All", index: 0},
