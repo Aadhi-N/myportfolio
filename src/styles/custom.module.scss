@@ -1,15 +1,27 @@
 @charset "utf-8";
-// @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+
+
+/* Custom colours */
+$navy-blue: hsl(203, 49%, 33%);
+$dark-purple: hsl(240, 27%, 18%);
+$faded-white: hsl(240, 47%, 96%);
+$light-grey: hsl(0, 0%, 96%);
+$medium-grey: hsl(0, 0%, 73%);
+$light-purple: hsl(232, 17%, 35%);
+$white: hsl(0, 0%, 100%);
+$hot-pink: hsl(350, 68%, 60%);
+
 
 #navbar {
   border-style: none none solid none;
   border-width: 3px;
-  border-color: hsl(240, 27%, 18%);
+  border-color: $dark-purple;
 }
 
 .lazy {
   background-image: none;
-  background-color: #F1F1FA;
+  background-color: $faded-white;
 }
 
 #hero-container {
@@ -20,35 +32,24 @@
   background-size: cover; /* Resize the background image to cover the entire container */
 };
 
-#hero-text {
-  // font-family: 'Ubuntu', sans-serif;
-};
 
 #hero-title {
-  color: #22223B;
+  color: $dark-purple;
   font-weight: bold;
-}
+};
+
 
 #hero-subtitle {
-  color: #22223B;
+  color: $dark-purple;
   font-weight: 400;
 }
-
 
 #name {
-  color: #4A4E69;
+  color: $light-purple;
 }
 
-#nav-burger {
-  font-weight: 400;
-  font-size: large;
-}
-
-#d {
-  display: block;
-}
 #portfolio-container {
-  background-color:hsl(0, 0%, 96%);
+  background-color: $light-grey;
 }
 
 #portfolio-title {
@@ -127,11 +128,25 @@
 }
 
 #about-container {
-  background-color:hsl(0, 0%, 100%);
+  background-color: $white;
 }
 
 #about-title {
   font-size: large;
+}
+
+/* On tablet */
+@media screen and (max-width: 769px) {
+  #about-pic {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#about-pic {
+
 }
 
 #about-content {
@@ -143,20 +158,21 @@
 }
 
 #about-subtext {
-  color:hsl(350, 68%, 60%);
+  color: $hot-pink;
   font-weight: 700;
 }
 
 #contact-container {
-  background-color:hsl(203, 49%, 33%);
+  background-color: $navy-blue;
 }
 
 #contact-title {
-  color: white;
+  color: $white;
 }
 
 #social-icons {
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 #icon-email:hover {
@@ -181,46 +197,60 @@
     padding-top: 0.4rem;
   }
   
-}
+};
 
-/* On mobile and tablet, change icon sizes */
-@media screen and (max-width: 1024px) {
+/* On tablet, change icon sizes */
+@media screen and (max-width: 768px) {
   #icon-email {
-    width: 50%;
+    width: 68px;
     filter: brightness(1000%);
-    // padding-bottom: 1rem;
   }
   
   #icon-linkedin {
     filter: brightness(650%);
-    width: 60%;
+    width: 80px;
     padding-top: 1rem;
   }
   
 };
 
+// /* On mobile and tablet, change icon sizes */
+// @media screen and (max-width: 1024px) {
+//   #icon-email {
+//     width: 50%;
+//     filter: brightness(1000%);
+//   }
+  
+//   #icon-linkedin {
+//     filter: brightness(650%);
+//     width: 30%;
+//     padding-top: 1rem;
+//   }
+  
+// };
+
 #footer-icon {
-  color: hsl(350, 68%, 60%);
+  color: $hot-pink;
   width: 80px;
   position: relative;
   top: -85px;
-  z-index: 99;
+  // z-index: 99;
 }
 
 
-header {
-  position: fixed;
-  top: 50;
-  transition: box-shadow .3s ease;
-  width: 100%;
+// header {
+//   position: fixed;
+//   top: 50;
+//   transition: box-shadow .3s ease;
+//   width: 100%;
 
-  &[data-active='true'] {
-    box-shadow: 0 2px 8px rgba(152,168,188,.2);
-  }
-}
+//   &[data-active='true'] {
+//     box-shadow: 0 2px 8px rgba(152,168,188,.2);
+//   }
+// }
 
 #modal-subtitle {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid $medium-grey;
 }
 
 #link-text {

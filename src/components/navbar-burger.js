@@ -1,58 +1,45 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import {navBurger} from "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
 
-class NavbarBurger extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { active: false };
-  }
-  handleClick = () => {
-    this.setState({ active: !this.state.active });
+const NavbarBurger = ({ navbarItems }) => {
+  const [navBurgerActive, setNavBurgerActive] = useState(false);
+  const [activeTab, setActiveTab] = useState(" ");
+
+  function handleClick () {
+    setNavBurgerActive(prevNavburgerState => !prevNavburgerState);
    };
-  render() {
+  
     return (
-    <>
       <nav 
-        className="navbar is-hidden-desktop pr-6"
+        className="navbar is-hidden-desktop pr-6 is-fixed-top"
         role="navigation" 
         aria-label="main navigation"
       >
+        {/* burger lines start */}
         <div className="navbar-brand">
           <a 
           role="button" 
-          className="navbar-burger"
+          className={"navbar-burger" + (navBurgerActive ? " is-active" : " ")}
           aria-label="menu" 
           aria-expanded="false"
-          onClick={this.handleClick}
+          onClick={handleClick}
           >
             <span aria-hidden="true" ></span>
             <span aria-hidden="true" ></span>
             <span aria-hidden="true" ></span>
           </a>
         </div>
+        {/* burger lines end */}
 
-        <div 
-          className={"navbar-dropdown px-5 pb-5" + (this.state.active ? "  " : " is-hidden ")}
-        >
-          <a className="navbar-item" id={navBurger} href="/">
-            Home
-          </a>
-          <a className="navbar-item" id={navBurger} href="/portfolio">
-            Portfolio
-          </a>
-          <a className="navbar-item" id={navBurger} href="/about">
-            About
-          </a>
-          <a className="navbar-item" id={navBurger} href="/contact">
-            Contact
-          </a>
+        <div className={"navbar-dropdown px-5 pb-5" + (navBurgerActive ? " " : " is-hidden ")}>
+          {navbarItems.map((item, index) => (
+            <a className={"navbar-item" + (activeTab == index ? " is-active" : " ")} onClick={() => {scrollTo(`#${item.name}`); setActiveTab(index); setNavBurgerActive(false)}}>{item.name.charAt(0).toUpperCase()+item.name.slice(1)}</a>
+          ))}
         </div>
       </nav>
-    </>
     )
-  }
-}
+};
 
 export default NavbarBurger;

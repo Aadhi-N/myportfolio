@@ -21,25 +21,42 @@ import screenshot2 from "../images/screenshot2.jpg";
 
 
 const Layout = ({children}) => {
-
-
-  const [ref, inView ] = useInView({
-    threshold: 0.9,
+  const [ref, inView] = useInView({
+    threshold: 0.8
   });
 
+  const [ref2, inView2] = useInView({
+    threshold: 0.1
+  });
 
-    
+  function activeTab () {
+    if (inView) {
+      console.log('inview', ref)
+      return 1;
+    } else if (inView2 && !inView) {
+      return 2;
+    }
+  };
+
   return (
     <main>
-      <NavbarBurger/>
+      <NavbarBurger navbarItems={[
+        {name: "home", index: 0},
+        {name: "portfolio", index: 1},
+        {name: "about", index: 2},
+        {name: "contact", index: 3},
+      ]}/>
+      
       <Hero />
-      <Search/>
+
+      {() => activeTab()}
       <Navbar navbarItems={[
         {name: "home", index: 0},
         {name: "portfolio", index: 1},
         {name: "about", index: 2},
         {name: "contact", index: 3},
       ]}/>
+
       <PortfolioPage 
         portfolioNav={[
           {name: "All", index: 0},

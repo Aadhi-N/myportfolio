@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {aboutContainer, aboutContent, aboutText, aboutSubtext,} from "../styles/custom.module.scss";
+import {aboutContainer, aboutContent, aboutText, aboutSubtext, aboutPic} from "../styles/custom.module.scss";
 import profilePic from "../images/profile_pic.jpeg";
 
 const AboutPage = () => {
@@ -10,7 +10,7 @@ const AboutPage = () => {
           <h1 className="title is-1 has-text-centered pt-6 pb-5 is-underlined has-text-weight-bold">ABOUT</h1>
           <div className="container" id={aboutContent}>
             <div className="columns p-5 mb-6">
-              <div className="column is-one-fifth">
+              <div className="column is-one-fifth" id={aboutPic}>
                 <figure className="image">
                   <img className="is-rounded" src={profilePic}/>
                 </figure>

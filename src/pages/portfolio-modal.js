@@ -15,7 +15,7 @@ const PortfolioModal = ({activeModal, toggleModal, modalDetails}) => {
     };
  
   return (
-    <div className={"modal" + (!activeModal ? " is-active" : " ")}>
+    <div className={"modal" + (activeModal ? " is-active" : " ")}>
         <div className="modal-background"></div>
           <div className="modal-content">
             <p className="image">

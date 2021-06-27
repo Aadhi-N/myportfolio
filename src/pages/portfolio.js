@@ -39,7 +39,6 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
   function toggleModal(item) {
     setActiveModal(prevActiveModal => !prevActiveModal);
     setModalDetails(prevModalDetails => prevModalDetails = item);
-    console.log('item', item)
   }
 
   /* Render portfolio tiles */
@@ -57,11 +56,6 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
         <div>
           {group(items, 3).map(children =>
             <div className="tile is-ancestor is-justify-content-center">
-         
-
-
-
-
               {children.map((item, index) =>  
                 <a><div className={"tile is-parent" + (activeTab == item.tag || activeTab == 0 ? " " : " is-hidden")} id={portfolioTileParent}>
                   <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item.index)} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
@@ -103,7 +97,7 @@ const PortfolioPage = ({portfolioNav, portfolioItems}) => {
               <ul>{getPortfolioNav()}</ul>
             </div>
           </div>
-          <div className="container is-fluid" id={tilesContainer}>{getPortfolioItems()}</div>
+          <div className="container" id={tilesContainer}>{getPortfolioItems()}</div>
 
 
 
