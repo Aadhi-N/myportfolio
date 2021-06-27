@@ -44,7 +44,9 @@
   font-size: large;
 }
 
-
+#d {
+  display: block;
+}
 #portfolio-container {
   background-color:hsl(0, 0%, 96%);
 }
@@ -60,12 +62,24 @@
 
 #parent-tile {
   background-image: url("https://bulma.io/images/placeholders/640x480.png");
+};
+
+// Sets tile columns to fixed size
+#portfolioTileParent {
+  min-width: 22rem;
+  max-width: 22rem;
 }
 
 //Disables onMouseLeave in child context of tile containers
 #portfolio-tile-child * {
   pointer-events: none;
 }
+
+// Sets tile columns to fixed size
+#portfolio-tile-child {
+  min-width: 20rem;
+  max-width: 20rem;
+};
 
 #portfolio-icon {
   animation: fadeIn 0.5s;
@@ -99,37 +113,18 @@
   100% {opacity:1;}
 }
 
-#portfolio-details * {
-  animation: move-up 0.5s linear;
-  -webkit-animation: move-up 0.5s;
-  -moz-animation: move-up 0.5s;
-  -o-animation: move-up 0.5s;
-  -ms-animation: move-up 0.5s;
+#portfolio-details {
+  text-align: center;
+  animation: fadeIn 0.5s;
+
 }
 
-@keyframes move-up {
-  from {
-    top: 0px;
-  }
-
-  to {
-    top: 50px;
-  }
+#learnmore-btn {
+  text-align: center;
 }
-            
-@-webkit-keyframes move-up {
-  from {
-    top: 0px;
-  }
-
-  to {
-    top: 50px;
-  }
-};
-
-// #btn {
-//   width: 10px;
-// }
+#learnmore-btn:hover {
+  color: blue;
+}
 
 #about-container {
   background-color:hsl(0, 0%, 100%);

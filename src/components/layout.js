@@ -12,7 +12,7 @@ import Footer from "./footer.js";
 
 import Search from "../pages/test.js";
 
-import {heroContainer, heroTitle, heroSubtitle, name, heroText} from "../styles/custom.module.scss";
+import "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
 
 import screenshot1 from "../images/screenshot.jpg";
@@ -48,7 +48,7 @@ const Layout = ({children}) => {
           {name: "React", index: 3},
           {name: "Angular", index: 4}]}
         portfolioItems={[
-          {name: "JS", index: 0, tag: 1, icon: screenshot1, title: "hi", lang: "yo", desc: "blah"},
+          {name: "JS", index: 0, tag: 1, icon: screenshot1, title: "hi", lang: "yo", desc: "blahfffffffffsdfsdfsdfsdfsdfsdfsdfsdf"},
           {name: "JS", index: 1, tag: 1, icon: screenshot2, title: "hi2", lang: "yo2", desc: "blah2"},
           {name: "Ruby/Rails", index: 2, tag: 2},
           {name: "React", index: 3, tag: 3},
