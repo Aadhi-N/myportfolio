@@ -10,6 +10,8 @@ $light-purple: hsl(232, 17%, 35%);
 $white: hsl(0, 0%, 100%);
 $hot-pink: hsl(350, 68%, 60%);
 
+/* ---------------------------------- START NAVBAR ---------------------------------- */
+
 #navbar {
   border-style: none none solid none;
   border-width: 3px;
@@ -22,6 +24,11 @@ $hot-pink: hsl(350, 68%, 60%);
   }
 }
 
+/* ---------------------------------- END NAVBAR ---------------------------------- */
+
+/* ---------------------------------- START HERO ---------------------------------- */
+
+//lazy-load hero image
 .lazy {
   background-image: none;
   background-color: $faded-white;
@@ -35,12 +42,10 @@ $hot-pink: hsl(350, 68%, 60%);
   background-size: cover; /* Resize the background image to cover the entire container */
 };
 
-
 #hero-title {
   color: $dark-purple;
   font-weight: bold;
 };
-
 
 #hero-subtitle {
   color: $dark-purple;
@@ -49,7 +54,11 @@ $hot-pink: hsl(350, 68%, 60%);
 
 #name {
   color: $light-purple;
-}
+};
+/* ---------------------------------- END HERO ---------------------------------- */
+
+
+/* ---------------------------------- START PORTFOLIO ---------------------------------- */
 
 #portfolio-container {
   background-color: $light-grey;
@@ -65,8 +74,27 @@ $hot-pink: hsl(350, 68%, 60%);
   background-image: url("https://bulma.io/images/placeholders/640x480.png");
 };
 
+/* on small mobile, adjust tile size and padding */
+@media screen and (max-width: 375px){
+  #portfolioTileParent {
+    min-width: 15rem;
+    max-width: 15rem;
+  };
 
-/* on mobile, adjust tile size and padding */
+  // Sets tile columns to fixed size
+  #portfolio-tile-child {
+    min-width: 13rem;
+    max-width: 13rem;
+  };
+
+  #tiles-container {
+    padding: 0rem 4rem 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+};
+/* on large mobile, adjust tile size and padding */
 @media screen and (max-width: 425px){
   #portfolioTileParent {
     min-width: 15rem;
@@ -80,7 +108,7 @@ $hot-pink: hsl(350, 68%, 60%);
   };
 
   #tiles-container {
-    padding: 0rem 6rem 4rem;
+    // padding: 0rem 6rem 4rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -198,7 +226,10 @@ $hot-pink: hsl(350, 68%, 60%);
   color: blue;
 }
 
-/* ----- START ABOUT ----- */
+/* ---------------------------------- END PORTFOLIO ---------------------------------- */
+
+
+/* ---------------------------------- START ABOUT ---------------------------------- */
 
 #about-container {
   background-color: $white;
@@ -208,8 +239,29 @@ $hot-pink: hsl(350, 68%, 60%);
   font-size: large;
 }
 
+/* on small mobile, adjust size of profile pic */
+@media screen and (max-width: 375px) {
+  #about-content {
+    padding: 0rem 2rem !important;
+  }
 
-/* on mobile, adjust size of profile pic */
+  #about-pic {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+
+  #about-text {
+    padding-top: 2rem;
+  }
+
+  #about-text-column {
+    padding: 0px;
+  }
+};
+
+/* on large mobile, adjust size of profile pic */
 @media screen and (max-width: 425px) {
   #about-pic {
     width: 250px;
@@ -260,8 +312,9 @@ $hot-pink: hsl(350, 68%, 60%);
   font-weight: 700;
 }
 
-/* ---------------------------------- END ABOUT ----- */
+/* ---------------------------------- END ABOUT ---------------------------------- */
 
+/* ---------------------------------- START CONTACT ---------------------------------- */
 #contact-container {
   background-color: $navy-blue;
 }
@@ -321,40 +374,6 @@ $hot-pink: hsl(350, 68%, 60%);
   
 };
 
-// /* On mobile and tablet, change icon sizes */
-// @media screen and (max-width: 1024px) {
-//   #icon-email {
-//     width: 50%;
-//     filter: brightness(1000%);
-//   }
-  
-//   #icon-linkedin {
-//     filter: brightness(650%);
-//     width: 30%;
-//     padding-top: 1rem;
-//   }
-  
-// };
-
-#footer-icon {
-  color: $hot-pink;
-  width: 80px;
-  position: relative;
-  top: -85px;
-  // z-index: 99;
-}
-
-
-// header {
-//   position: fixed;
-//   top: 50;
-//   transition: box-shadow .3s ease;
-//   width: 100%;
-
-//   &[data-active='true'] {
-//     box-shadow: 0 2px 8px rgba(152,168,188,.2);
-//   }
-// }
 
 #modal-subtitle {
   border-bottom: 1px solid $medium-grey;
@@ -377,3 +396,17 @@ $hot-pink: hsl(350, 68%, 60%);
   width: 40px;
   margin-right: 1rem;
 }
+
+/* ---------------------------------- END CONTACT ---------------------------------- */
+
+/* ---------------------------------- START FOOTER ---------------------------------- */
+#footer-icon {
+  color: $hot-pink;
+  width: 80px;
+  position: relative;
+  top: -85px;
+  // z-index: 99;
+};
+
+/* ---------------------------------- END FOOTER ---------------------------------- */
+

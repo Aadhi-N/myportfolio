@@ -8,7 +8,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
     return (
-        <section className="hero is-fullheight" id="home">
+        <section className="hero is-fullheight" id="home" >
         <div className="hero-body" id={heroContainer}>
           <div className="container has-text-centered" id={heroText}>
             <p className="title is-size-1" id={heroTitle}>

@@ -3,7 +3,7 @@ import PortfolioModal from './portfolio-modal.js';
 
 import {portfolioContainer, tilesContainer, portfolioTileParent, portfolioTileChild, portfolioIcon, portfolioDetails, learnmoreBtn, } from "../styles/custom.module.scss";
 
-const PortfolioPage = ({portfolioNav, portfolioItems}) => {
+const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
   const [activeTab, setActiveTab] = useState(" ");
   const [activeTile, setActiveTile] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
