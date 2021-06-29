@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 /* Custom colours */
 $navy-blue: hsl(203, 49%, 33%);
 $dark-purple: hsl(240, 27%, 18%);
@@ -12,11 +10,16 @@ $light-purple: hsl(232, 17%, 35%);
 $white: hsl(0, 0%, 100%);
 $hot-pink: hsl(350, 68%, 60%);
 
-
 #navbar {
   border-style: none none solid none;
   border-width: 3px;
   border-color: $dark-purple;
+};
+
+@media screen and (max-width: 767px) {
+  #navbar {
+    // position: unset;
+  }
 }
 
 .lazy {
@@ -55,32 +58,99 @@ $hot-pink: hsl(350, 68%, 60%);
 #portfolio-title {
   font-family: 'Ubuntu', sans-serif;
   font-size: large;
-}
+};
 
-#tiles-container {
-  padding: 0rem 10rem 6rem;
-}
-
+//portfolio tile project screenshot
 #parent-tile {
   background-image: url("https://bulma.io/images/placeholders/640x480.png");
 };
 
-// Sets tile columns to fixed size
-#portfolioTileParent {
-  min-width: 22rem;
-  max-width: 22rem;
-}
+
+/* on mobile, adjust tile size and padding */
+@media screen and (max-width: 425px){
+  #portfolioTileParent {
+    min-width: 15rem;
+    max-width: 15rem;
+  };
+
+  // Sets tile columns to fixed size
+  #portfolio-tile-child {
+    min-width: 13rem;
+    max-width: 13rem;
+  };
+
+  #tiles-container {
+    padding: 0rem 6rem 4rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+};
+
+
+/* on tablet, adjust tile size and padding */
+@media screen and (min-width: 426px){
+  #portfolioTileParent {
+    min-width: 22rem;
+    max-width: 22rem;
+  };
+
+  // Sets tile columns to fixed size
+  #portfolio-tile-child {
+    min-width: 20rem;
+    max-width: 20rem;
+  };
+
+  #tiles-container {
+    padding: 0rem 10rem 6rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+};
+
+/* on large laptop, adjust tile size */
+@media screen and (min-width: 1440px){
+  #portfolioTileParent {
+    min-width: 22rem;
+    max-width: 22rem;
+  };
+
+  // Sets tile columns to fixed size
+  #portfolio-tile-child {
+    min-width: 20rem;
+    max-width: 20rem;
+  };
+
+  #tiles-container {
+    padding: 0rem 10rem 6rem;
+  }
+};
+
+/* on small laptop, adjust tile size and padding */
+@media screen and (min-width: 769px){
+  #portfolioTileParent {
+    min-width: 16rem;
+    max-width: 16rem;
+  };
+
+  // Sets tile columns to fixed size
+  #portfolio-tile-child {
+    min-width: 14rem;
+    max-width: 14rem;
+  };
+
+  #tiles-container {
+    padding: 0rem 10rem 6rem;
+  };
+};
+
+
 
 //Disables onMouseLeave in child context of tile containers
 #portfolio-tile-child * {
   pointer-events: none;
 }
-
-// Sets tile columns to fixed size
-#portfolio-tile-child {
-  min-width: 20rem;
-  max-width: 20rem;
-};
 
 #portfolio-icon {
   animation: fadeIn 0.5s;
@@ -123,9 +193,12 @@ $hot-pink: hsl(350, 68%, 60%);
 #learnmore-btn {
   text-align: center;
 }
+
 #learnmore-btn:hover {
   color: blue;
 }
+
+/* ----- START ABOUT ----- */
 
 #about-container {
   background-color: $white;
@@ -135,19 +208,44 @@ $hot-pink: hsl(350, 68%, 60%);
   font-size: large;
 }
 
-/* On tablet */
-@media screen and (max-width: 769px) {
+
+/* on mobile, adjust size of profile pic */
+@media screen and (max-width: 425px) {
+  #about-pic {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+
+  #about-text {
+    padding-top: 2rem;
+  }
+
+  #about-text-column {
+    padding: 0px;
+  }
+};
+
+/* on tablet, adjust size of profile pic */
+@media screen and (min-width: 426px) {
+  #about-pic {
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+};
+
+/* on laptop, adjust size of profile pic */
+@media screen and (min-width: 768px) {
   #about-pic {
     width: 300px;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-#about-pic {
-
-}
+};
 
 #about-content {
   padding: 0rem 5rem;
@@ -162,12 +260,21 @@ $hot-pink: hsl(350, 68%, 60%);
   font-weight: 700;
 }
 
+/* ---------------------------------- END ABOUT ----- */
+
 #contact-container {
   background-color: $navy-blue;
 }
 
 #contact-title {
   color: $white;
+};
+
+/* on mobile, adjust padding for text */
+@media screen and (max-width: 425px) {
+  #contact-title {
+    padding: 0rem 2rem;
+  }
 }
 
 #social-icons {
@@ -184,7 +291,7 @@ $hot-pink: hsl(350, 68%, 60%);
 };
 
 /* On desktop and fullHD, change icon sizes */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
   #icon-email {
     filter: brightness(1000%);
     width: 100px;

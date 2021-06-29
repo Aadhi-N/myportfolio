@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {aboutContainer, aboutContent, aboutText, aboutSubtext, aboutPic} from "../styles/custom.module.scss";
+import {aboutContainer, aboutContent, aboutTextColumn, aboutText, aboutSubtext, aboutPic} from "../styles/custom.module.scss";
 import profilePic from "../images/profile_pic.jpeg";
 
 const AboutPage = () => {
@@ -15,23 +15,20 @@ const AboutPage = () => {
                   <img className="is-rounded" src={profilePic}/>
                 </figure>
               </div>
-              <div className="column is-four-fifths p-5 mx-6">
+              <div className="column is-three-quarters-desktop" id={aboutTextColumn}>
                 <div className="title pb-4" id={aboutText}>
                   Hello! My name is Aadhilah, and I enjoy <span id={aboutSubtext}>web development</span>. 
                 </div>
                 <h4 className="subtitle is-5">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-
                 </h4>
               </div>
-              
             </div>
           </div>
-
         </div>
       </div>
     </div>
   )
-}
+};
 
 export default AboutPage;
