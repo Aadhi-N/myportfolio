@@ -181,6 +181,7 @@ $hot-pink: hsl(350, 68%, 60%);
 }
 
 #portfolio-icon {
+  background-color: $white;
   animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;
   -moz-animation: fadeIn 0.5s;
@@ -374,9 +375,12 @@ $hot-pink: hsl(350, 68%, 60%);
   
 };
 
-
 #modal-subtitle {
   border-bottom: 1px solid $medium-grey;
+};
+
+#modal-icon {
+  background-color: $white;
 }
 
 #link-text {

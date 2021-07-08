@@ -12,6 +12,9 @@ import ContactPage from './contact.js';
 
 import screenshot1 from "../images/screenshot.jpg";
 import screenshot2 from "../images/screenshot2.jpg";
+import terminalIcon from "../images/terminal_icon.png";
+import portfolioScreenshot from "../images/portfoliosite_screenshot.png";
+import chattyAppScreenshot from "../images/chattyapp_screenshot.png";
 
 const IndexPage = () => {
   // define elements for active nav on scroll
@@ -56,13 +59,16 @@ const IndexPage = () => {
           {name: "React", index: 3},
           {name: "Angular", index: 4}]}
         portfolioItems={[
-          {name: "JS", index: 0, tag: 1, icon: screenshot1, title: "hi", lang: "yo", desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-          `},
-          {name: "JS", index: 1, tag: 1, icon: screenshot2, title: "hi2", lang: "yo2", desc: "blah2"},
-          {name: "Ruby/Rails", index: 2, tag: 2, icon: screenshot2, title: "hi2", lang: "yo2", desc: "blah2"},
-          {name: "React", index: 3, tag: 3, icon: screenshot2, title: "hi2", lang: "yo2", desc: "blah2"},
-          {name: "Angular", index: 4, tag: 4, icon: screenshot2, title: "hi2", lang: "yo2", desc: "blah2"},
-          {name: "Angular", index: 5, tag: 4, icon: screenshot2, title: "hi2", lang: "yo2", desc: "blah2"}]}>
+          {name: "adistodo", index: 0, tag: 1, icon: terminalIcon, title: "NodeJS cli app", lang: "NodeJS", summary: `A task management app.`, desc: "Adistodo is a task-management app that can manage even your most complex, overwhelming lists in life, all through the terminal.", website: null, github: "https://github.com/Aadhi-N/adistodo-cli"},
+          {name: "lookuptime", index: 1, tag: 1, icon: terminalIcon, title: "NodeJS cli app", lang: "NodeJS", summary: `An app to check the time around the world.`, desc: `Lookuptime is a world time lookup cli app using the "worldtimeapi" API.
+          It's a quick way to check what the time is in another city, right in your terminal.`, website: null, github: "https://github.com/Aadhi-N/lookuptime"},
+          {name: "Portfolio Site", index: 2, tag: 3, icon: portfolioScreenshot, title: "My portfolio site", lang: "Gatsby, Bulma, Sass", summary: "Website to showcase my projects.", desc: "My portfolio website was created to showcase my projects. Frontend framework is Gatsby (based on React), and Bulma/Sass for CSS.", website: "https://www.aadhilah.com", github: "https://github.com/Aadhi-N/myportfolio"},
+          {name: "Chatty App", index: 3, tag: 3, icon: chattyAppScreenshot, title: "Real-time chat application", lang: "React, Websockets", summary: "Real-time chat application", desc: "Chatty App is a client-side single-page application where multiple users can chat with each other in real time. It is built with React and Websockets.", github: "https://github.com/Aadhi-N/ChattyAppFinal"},
+          {name: "React", index: 4, tag: 3, icon: screenshot2, title: "hi2", lang: "yo2", summary: ``, desc: "blah2", website: "www.google.com", github: "www.github.com"},
+          {name: "Angular", index: 5, tag: 4, icon: screenshot2, title: "hi2", lang: "yo2", summary: ``, desc: "blah2", website: "www.google.com", github: "www.github.com"},
+          {name: "Angular", index: 5, tag: 4, icon: screenshot2, title: "hi2", lang: "yo2", summary: ``, desc: "blah2", website: "www.google.com", github: "www.github.com"},
+          
+          ]}>
         </PortfolioPage>
       </span>
       <span ref={ref2}>

@@ -18,6 +18,7 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
   };
 
   function handleTileHover(index) {
+    console.log('IDX', index)
     setActiveTile(prevActiveTile => !prevActiveTile);
     setActiveProject(index);
   }
@@ -62,7 +63,7 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
                     <div>
                       <p className="title" id={portfolioDetails}>{item.name}</p>
                       <p className="subtitle" id={portfolioDetails}>{item.lang}</p>
-                      <p className="subtitle" id={portfolioDetails}>{item.desc}</p>
+                      <p className="subtitle" id={portfolioDetails}>{item.summary}</p>
                       <div className="column" id={learnmoreBtn}>
                         <button className="button is-danger is-outlined">
                           LEARN MORE
