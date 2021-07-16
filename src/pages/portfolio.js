@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PortfolioModal from './portfolio-modal.js';
 
-import {portfolioContainer, tilesContainer, portfolioTileParent, portfolioTileChild, portfolioIcon, portfolioDetails, learnmoreBtn, } from "../styles/custom.module.scss";
+import {portfolioContainer, tilesContainer, portfolioTileParent, portfolioTileChild, portfolioIcon, portfolioDetails, learnmoreBtn, box } from "../styles/custom.module.scss";
 
 const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
   const [activeTab, setActiveTab] = useState(" ");
@@ -71,7 +71,7 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
                       </div>                 
                     </div>
                     :
-                    <figure className="image is-5by4">
+                    <figure className="image is-4by3">
                       <img src={item.icon} id={portfolioIcon}/>
                     </figure>
                     }          

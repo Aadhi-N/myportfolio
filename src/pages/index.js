@@ -10,11 +10,12 @@ import PortfolioPage from './portfolio.js';
 import AboutPage from './about.js';
 import ContactPage from './contact.js';
 
-import screenshot1 from "../images/screenshot.jpg";
-import screenshot2 from "../images/screenshot2.jpg";
 import terminalIcon from "../images/terminal_icon.png";
 import portfolioScreenshot from "../images/portfoliosite_screenshot.png";
 import chattyAppScreenshot from "../images/chattyapp_screenshot.png";
+import vacationcityScreenshot from "../images/vacationcity_screenshot1.png";
+import locallibraryScreenshot from "../images/locallibrary_screenshot1.png";
+import rubyScreenshot from "../images/ruby.png";
 
 const IndexPage = () => {
   // define elements for active nav on scroll
@@ -64,9 +65,11 @@ const IndexPage = () => {
           It's a quick way to check what the time is in another city, right in your terminal.`, website: null, github: "https://github.com/Aadhi-N/lookuptime"},
           {name: "Portfolio Site", index: 2, tag: 3, icon: portfolioScreenshot, title: "My portfolio site", lang: "Gatsby, Bulma, Sass", summary: "Website to showcase my projects.", desc: "My portfolio website was created to showcase my projects. Frontend framework is Gatsby (based on React), and Bulma/Sass for CSS.", website: "https://www.aadhilah.com", github: "https://github.com/Aadhi-N/myportfolio"},
           {name: "Chatty App", index: 3, tag: 3, icon: chattyAppScreenshot, title: "Real-time chat application", lang: "React, Websockets", summary: "Real-time chat application", desc: "Chatty App is a client-side single-page application where multiple users can chat with each other in real time. It is built with React and Websockets.", github: "https://github.com/Aadhi-N/ChattyAppFinal"},
-          {name: "React", index: 4, tag: 3, icon: screenshot2, title: "hi2", lang: "yo2", summary: ``, desc: "blah2", website: "www.google.com", github: "www.github.com"},
-          {name: "Angular", index: 5, tag: 4, icon: screenshot2, title: "hi2", lang: "yo2", summary: ``, desc: "blah2", website: "www.google.com", github: "www.github.com"},
-          {name: "Angular", index: 5, tag: 4, icon: screenshot2, title: "hi2", lang: "yo2", summary: ``, desc: "blah2", website: "www.google.com", github: "www.github.com"},
+          {name: "Local Library App", index: 4, tag: 1, icon: locallibraryScreenshot, title: "Library App", lang: "NodeJS", summary: `Online catalog for a small library`, desc: "Local Library App is an online catalog for a small library. Users can browse available books and administrators can manage accounts and inventory.", website: "https://safe-citadel-71112.herokuapp.com/", github: "https://github.com/Aadhi-N/locallibraryapp"},
+          {name: "Vacation City", index: 5, tag: 4, icon: vacationcityScreenshot, title: "Choose a vacation destination based on the weather", lang: "Angular", summary: `An app to choose a vacation destination based on the weather`, desc: `Vacation City is an app that allows people to choose their next vacation based on what the weather is at a particular month around the world.
+          Have you ever had difficulty scheduling your future vacation on a particular calendar month, only to find out the city you want to travel to has unideal weather conditions?
+          This app helps you narrow down where you'd like to go based on your preferred travel month, temperatures, and humidity!`, website: "https://vacationcity.herokuapp.com/", github: "https://github.com/Aadhi-N/vacationcity-v2"},
+          {name: "E-Commerce App", index: 6, tag: 2, icon: rubyScreenshot, title: "E-Commerce App", lang: "Ruby/Rails", summary: `An e-commerce site.`, desc: "E-Commerce", github: "https://github.com/Aadhi-N/jungle-rails"},
           
           ]}>
         </PortfolioPage>

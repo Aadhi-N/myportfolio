@@ -85,6 +85,7 @@ $hot-pink: hsl(350, 68%, 60%);
   #portfolio-tile-child {
     min-width: 13rem;
     max-width: 13rem;
+    border-radius: 0px !important;
   };
 
   #tiles-container {
@@ -112,6 +113,7 @@ $hot-pink: hsl(350, 68%, 60%);
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 3rem;
   };
 };
 
@@ -244,6 +246,7 @@ $hot-pink: hsl(350, 68%, 60%);
 @media screen and (max-width: 375px) {
   #about-content {
     padding: 0rem 2rem !important;
+    margin: 0px !important;
   }
 
   #about-pic {
@@ -264,6 +267,9 @@ $hot-pink: hsl(350, 68%, 60%);
 
 /* on large mobile, adjust size of profile pic */
 @media screen and (max-width: 425px) {
+  #about-content {
+    margin: 0px !important;
+  }
   #about-pic {
     width: 250px;
     display: block;

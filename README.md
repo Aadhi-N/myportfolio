@@ -18,6 +18,8 @@ Link to site: [https://www.aadhilah.com](https://www.aadhilah.com)
     
     Bulma was used for styling, as it was quick to get started with and also has great documentation. 
 
+    Hosted on Netflify.
+
 
 #### Run project locally:
 
