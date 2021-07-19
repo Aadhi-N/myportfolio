@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {aboutContainer, aboutContent, aboutTextColumn, aboutText, aboutSubtext, aboutPic} from "../styles/custom.module.scss";
+import {aboutContainer, aboutContent, aboutTextColumn, aboutText, aboutSubtext, aboutPic, aboutSubtitle} from "../styles/custom.module.scss";
 import profilePic from "../images/profile_pic.jpeg";
 
 const AboutPage = () => {
@@ -16,11 +16,13 @@ const AboutPage = () => {
                 </figure>
               </div>
               <div className="column is-three-quarters-desktop" id={aboutTextColumn}>
-                <div className="title pb-4" id={aboutText}>
+                <div className="title pb-3" id={aboutText}>
                   Hello! My name is Aadhilah, and I enjoy <span id={aboutSubtext}>web development</span>. 
                 </div>
-                <h4 className="subtitle is-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                <h4 className="subtitle is-4">
+                <p id={aboutSubtitle}>The web has taken over the world. It's the present, and the future. It's already transforming how we will live tomorrow. And that's why I became a web developer. </p>
+                <p id={aboutSubtitle}>Working in UX, program and project management in the financial industry, I became more and more in need of knowing how to use the tools to create experiences. I completed a full-stack coding bootcamp, and I'm more curious than ever in learning how to continue building technologies that shape our lives.</p>
+                <p>Have a look at my projects. They still have a long way to go till reaching perfection, but it's a start!</p>
                 </h4>
               </div>
             </div>

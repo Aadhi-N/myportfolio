@@ -13,12 +13,10 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
 
   /* Set tab active state */
   function handleClickActiveTab(index) {
-    // const newActiveTab = index;
     setActiveTab(index);
   };
 
   function handleTileHover(index) {
-    console.log('IDX', index)
     setActiveTile(prevActiveTile => !prevActiveTile);
     setActiveProject(index);
   }
@@ -60,7 +58,7 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
                   <a><div className={"tile is-parent" + (activeTab == item.tag || activeTab == 0 ? " " : " is-hidden")} id={portfolioTileParent}>
                     <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item.index)} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
                     {activeTile && activeProject == item.index ? 
-                    <div>
+                    <div className="py-5 px-3">
                       <p className="title" id={portfolioDetails}>{item.name}</p>
                       <p className="subtitle" id={portfolioDetails}>{item.lang}</p>
                       <p className="subtitle" id={portfolioDetails}>{item.summary}</p>

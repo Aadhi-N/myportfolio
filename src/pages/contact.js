@@ -24,7 +24,7 @@ const ContactPage = () => {
             </div>
             <div class="column">
                 <figure className="image">
-                  <a href="https://linkedin.com/aadhilahnizamdeen">
+                  <a href="https://linkedin.com/in/aadhilahnizamdeen">
                   <img className="is-squared" id={iconLinkedin} src={linkedinIcon}/>
                    </a>
                 </figure>
