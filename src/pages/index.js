@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useInView } from 'react-intersection-observer';
+import { Helmet } from "react-helmet"
 
 import Layout from '../components/layout';
 import Navbar from "../components/navbar";
@@ -34,6 +35,12 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta name="author" content="Aadhilah Nizamdeen"/>
+        <meta name="description" content="Portfolio site to showcase projects and web development skills"/>
+        <title>Aadhilah Nizamdeen Portfolio Site</title>
+        <html lang="en-US" />
+      </Helmet>
       <Navbar 
         activeEl={[
           {inView: (typeof inView0 === 'undefined') ? false : inView0}, 

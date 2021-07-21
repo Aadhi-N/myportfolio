@@ -18,11 +18,6 @@ $hot-pink: hsl(350, 68%, 60%);
   border-color: $dark-purple;
 };
 
-@media screen and (max-width: 767px) {
-  #navbar {
-    // position: unset;
-  }
-}
 
 /* ---------------------------------- END NAVBAR ---------------------------------- */
 
@@ -419,7 +414,6 @@ $hot-pink: hsl(350, 68%, 60%);
   width: 80px;
   position: relative;
   top: -85px;
-  // z-index: 99;
 };
 
 /* ---------------------------------- END FOOTER ---------------------------------- */

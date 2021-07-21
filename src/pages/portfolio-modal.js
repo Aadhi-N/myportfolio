@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -38,7 +38,7 @@ const PortfolioModal = ({activeModal, toggleModal, modalDetails}) => {
                   : null
                   } 
                   <a href={modalDetails.github} className="card-footer-item">
-                  <img src={github_icon} id={githubIcon}/>
+                  <img src={github_icon} id={githubIcon} alt="github icon"/>
                     <span id={linkText}>
                       GITHUB
                     </span>

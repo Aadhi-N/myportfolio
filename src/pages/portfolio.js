@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PortfolioModal from './portfolio-modal.js';
 
-import {portfolioContainer, tilesContainer, portfolioTileParent, portfolioTileChild, portfolioIcon, portfolioDetails, learnmoreBtn, box } from "../styles/custom.module.scss";
+import {portfolioContainer, tilesContainer, portfolioTileParent, portfolioTileChild, portfolioIcon, portfolioDetails, learnmoreBtn} from "../styles/custom.module.scss";
 
 const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
   const [activeTab, setActiveTab] = useState(" ");
@@ -25,7 +25,7 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
   function getPortfolioNav() {
     if (portfolioNav) {
       let listNav = portfolioNav.map((item, index) =>
-      <li className={activeTab == index ? "is-active" : " "}>
+      <li className={activeTab == index ? "is-active" : " "} key={index}>
         <a onClick={() => handleClickActiveTab(index)}>{item.name}</a>
       </li>)
       return listNav;
@@ -70,7 +70,7 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
                     </div>
                     :
                     <figure className="image is-4by3">
-                      <img src={item.icon} id={portfolioIcon}/>
+                      <img src={item.icon} id={portfolioIcon} alt={"icon for project: " + item.name}/>
                     </figure>
                     }          
                     </article> 

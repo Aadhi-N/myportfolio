@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-import {navbarBurger} from "../styles/custom.module.scss";
 import "../styles/bulma-custom.scss";
 
 const NavbarBurger = ({ navbarItems }) => {
@@ -23,7 +22,6 @@ const NavbarBurger = ({ navbarItems }) => {
           <a 
           role="button" 
           className={"navbar-burger" + (navBurgerActive ? " is-active" : " ")}
-          id={navbarBurger}
           aria-label="menu" 
           aria-expanded="false"
           onClick={handleClick}

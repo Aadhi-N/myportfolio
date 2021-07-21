@@ -11,8 +11,8 @@ const AboutPage = () => {
           <div className="container" id={aboutContent}>
             <div className="columns p-5 mb-6">
               <div className="column is-one-fifth" id={aboutPic}>
-                <figure className="image">
-                  <img className="is-rounded" src={profilePic}/>
+                <figure className="image is-fullwidth">
+                  <img className="is-rounded" src={profilePic} alt="profile pic"/>
                 </figure>
               </div>
               <div className="column is-three-quarters-desktop" id={aboutTextColumn}>

@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
-        <span className="footer-icon" >
+        <span className="footer-icon">
           <a>
-          <img src={arrowUp} id={footerIcon} onClick={() => scrollTo('#home')}/>
+          <img className="is-fullwidth" src={arrowUp} id={footerIcon} alt="arrow up icon" onClick={() => scrollTo('#home')}/>
           </a>
         </span>
         <p>
