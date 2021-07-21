@@ -1,0 +1,75 @@
+# import terminalIcon from "../images/terminal_icon.png";
+# import portfolioScreenshot from "../images/portfoliosite_screenshot.png";
+# import chattyAppScreenshot from "../images/chattyapp_screenshot.png";
+# import vacationcityScreenshot from "../images/vacationcity_screenshot1.png";
+# import locallibraryScreenshot from "../images/locallibrary_screenshot1.png";
+# import rubyScreenshot from "../images/ruby.png";
+portfolioItems:
+  - name: "adistodo"
+    index: 0
+    portfolioNavTag: 1
+    icon: "/static/images/terminal_icon.png"
+    title: "NodeJS cli app"
+    stack: "NodeJS"
+    summary: "A task management app."
+    desc: "Adistodo is a task-management app that can manage even your most complex, overwhelming lists in life, all through the terminal."
+    website: null
+    github: "https://github.com/Aadhi-N/adistodo-cli"
+  - name: "lookuptime"
+    index: 1
+    portfolioNavTag: 1
+    icon: terminalIcon
+    title: "NodeJS cli app"
+    stack: "NodeJS"
+    summary: "An app to check the time around the world."
+    desc: "Lookuptime is a world time lookup cli app using the `worldtimeapi` API. It's a quick way to check what the time is in another city, right in your terminal."
+    website: null
+    github: "https://github.com/Aadhi-N/lookuptime"
+  - name: "Portfolio Site"
+    index: 2
+    portfolioNavTag: 3
+    icon: portfolioScreenshot
+    title: "My portfolio site"
+    stack: "Gatsby, Bulma, Sass"
+    summary: "Website to showcase my projects."
+    desc: "My portfolio website was created to showcase my projects. Frontend framework is Gatsby (based on React), and Bulma/Sass for CSS."
+    website: "https://www.aadhilah.com"
+    github: "https://github.com/Aadhi-N/myportfolio"
+  - name: "Chatty App"
+    index: 3
+    portfolioNavTag: 3
+    icon: chattyAppScreenshot
+    title: "Real-time chat application"
+    stack: "React, Websockets"
+    summary: "Real-time chat application"
+    desc: "Chatty App is a client-side single-page application where multiple users can chat with each other in real time. It is built with React and Websockets."
+    github: "https://github.com/Aadhi-N/ChattyAppFinal"
+  - name: "Local Library App"
+    index: 4
+    portfolioNavTag: 1
+    icon: locallibraryScreenshot
+    title: "Library App"
+    stack: "NodeJS"
+    summary: "Online catalog for a small library"
+    desc: "Local Library App is an online catalog for a small library. Users can browse available books and administrators can manage accounts and inventory."
+    website: "https://safe-citadel-71112.herokuapp.com/"
+    github: "https://github.com/Aadhi-N/locallibraryapp"
+  - name: "Vacation City"
+    index: 5
+    portfolioNavTag: 4
+    icon: vacationcityScreenshot
+    title: "Choose a vacation destination based on the weather"
+    stack: "Angular"
+    summary: "An app to choose a vacation destination based on the weather"
+    desc: "Vacation City is an app that allows people to choose their next vacation based on what the weather is at a particular month around the world.\n Have you ever had difficulty scheduling your future vacation on a particular calendar month, only to find out the city you want to travel to has unideal weather conditions?\n This app helps you narrow down where you'd like to go based on your preferred travel month, temperatures, and humidity!"
+    website: "https://vacationcity.herokuapp.com/"
+    github: "https://github.com/Aadhi-N/vacationcity-v2"
+  - name: "E-Commerce App"
+    index: 6
+    portfolioNavTag: 2
+    icon: rubyScreenshot
+    title: "E-Commerce App"
+    stack: "Ruby/Rails"
+    summary: "An e-commerce site."
+    desc: "E-Commerce"
+    github: "https://github.com/Aadhi-N/jungle-rails"

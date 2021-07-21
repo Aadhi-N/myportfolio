@@ -29,14 +29,6 @@ $hot-pink: hsl(350, 68%, 60%);
   background-color: $faded-white;
 }
 
-#hero-container {
-  background-image: url("../images/hero_background.jpg");
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-};
-
 #hero-title {
   color: $dark-purple;
   font-weight: bold;

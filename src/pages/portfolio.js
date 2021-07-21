@@ -52,11 +52,13 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
       // Call group function to render tiles 
       let listItems = (
           <div>
-            {group(items, 3).map(children =>
+            {group(items, 3).map((children, index) =>
               <div className="tile is-ancestor is-justify-content-center">
+                <p>{index}</p>
                 {children.map((item, index) =>  
                   <a><div className={"tile is-parent" + (activeTab == item.tag || activeTab == 0 ? " " : " is-hidden")} id={portfolioTileParent}>
-                    <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item.index)} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
+                    <p>{index}</p>
+                    <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item[index])} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
                     {activeTile && activeProject == item.index ? 
                     <div className="py-5 px-3">
                       <p className="title" id={portfolioDetails}>{item.name}</p>

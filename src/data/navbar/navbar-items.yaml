@@ -1,0 +1,9 @@
+navbarItems:
+  - name: "home"
+    index: 0
+  - name: "portfolio"
+    index: 1
+  - name: "about"
+    index: 2
+  - name: "contact"
+    index: 3  

@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import "../styles/bulma-custom.scss";
 
-const NavbarBurger = ({ navbarItems }) => {
+const NavbarBurger = ({ navbarItemsQuery }) => {
+  // const {navbarItems} = navbarItemsQuery.allNavbarYaml.nodes[0];
+
   const [navBurgerActive, setNavBurgerActive] = useState(false);
   const [activeTab, setActiveTab] = useState(" ");
 
@@ -34,7 +37,7 @@ const NavbarBurger = ({ navbarItems }) => {
         {/* burger lines end */}
 
         <div className={"navbar-dropdown px-5 pb-5" + (navBurgerActive ? " " : " is-hidden ")}>
-          {navbarItems.map((item, index) => (
+          {navbarItemsQuery.map((item, index) => (
             <a className={"navbar-item" + (activeTab == index ? " is-active" : " ")} onClick={() => {scrollTo(`#${item.name}`); setActiveTab(index); setNavBurgerActive(false)}}>{item.name.charAt(0).toUpperCase()+item.name.slice(1)}</a>
           ))}
         </div>
@@ -43,3 +46,4 @@ const NavbarBurger = ({ navbarItems }) => {
 };
 
 export default NavbarBurger;
+

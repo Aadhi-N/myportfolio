@@ -1,0 +1,11 @@
+portfolioNav:
+  - name: "All"
+    index: 0
+  - name: "NodeJS/Javascript"
+    index: 1
+  - name: "Ruby/Rails"
+    index: 2
+  - name: "React"
+    index: 3  
+  - name: "Angular"
+    index: 4
