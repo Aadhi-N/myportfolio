@@ -2,7 +2,11 @@ node_modules/
 .cache/
 public
 
-./src/images/profile_pic.jpeg
+# my profile pic
+./static/images/profile_pic.png
+
+#my resume
+./static/files/resume.pdf
 
 notes.txt
 

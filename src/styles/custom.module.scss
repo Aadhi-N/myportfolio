@@ -331,6 +331,29 @@ $hot-pink: hsl(350, 68%, 60%);
 #social-icons {
   justify-content: center;
   padding-bottom: 30px;
+};
+
+#contact-icon-desc {
+  color: white;
+  text-align: center;
+}
+
+#contact-icon-desc-linkedin {
+  padding-top: 5px;
+  color: white;
+  text-align: center;
+}
+
+#contact-icon-desc-resume {
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+#contact-icon-desc-email {
+  padding-top: 5px;
+  color: white;
+  text-align: center;
 }
 
 #icon-email:hover {
@@ -341,11 +364,25 @@ $hot-pink: hsl(350, 68%, 60%);
   filter: invert(40%)
 };
 
+#icon-github-contact:hover {
+  filter: contrast(0%);
+};
+
+#icon-resume:hover {
+  filter: contrast(0%)
+};
+
+
+
 /* On desktop and fullHD, change icon sizes */
 @media screen and (min-width: 769px) {
   #icon-email {
     filter: brightness(1000%);
     width: 100px;
+  }
+
+  #icon-email-a {
+    text-align: center;
   }
   
   #icon-linkedin {
@@ -353,23 +390,67 @@ $hot-pink: hsl(350, 68%, 60%);
     width: 116px;
     padding-left: 10px;
     padding-top: 0.4rem;
-  }
-  
+  };
+
+  #icon-resume {
+    border-radius: 12px;
+    filter: invert(96%);
+    width: 85px;
+    margin: 0.4rem 1rem 0rem 1rem;
+  };
+
+  #icon-github-contact {
+    filter: invert(96%);
+    width: 90px;
+  };
+ 
 };
 
-/* On tablet, change icon sizes */
+/* On tablet and mobile, change icon sizes */
 @media screen and (max-width: 768px) {
+  #test {
+    margin: 0rem !important;
+  }
+  
+  #icon-github-contact {
+    filter: invert(96%);
+    width: 68px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  };
+
+  #icon-linkedin {
+    filter: brightness(650%);
+    width: 68px;
+    padding-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  };
+  
+  #icon-resume {
+    border-radius: 12px;
+    filter: invert(96%);
+    width: 68px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  };
+
   #icon-email {
     width: 68px;
     filter: brightness(1000%);
-  }
+    margin-top: 2rem;
+
+  };
   
-  #icon-linkedin {
-    filter: brightness(650%);
-    width: 80px;
-    padding-top: 1rem;
+  #icon-email-a {
+    text-align: center;
   }
-  
+
 };
 
 #modal-subtitle {

@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import {heroTitle, heroSubtitle, name, heroText} from "../styles/custom.module.scss";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,7 +18,7 @@ const Hero = () => {
           quality="100"
           alt=""
           src={
-            "../images/hero_background.jpeg"
+            "../../static/images/hero_background.jpeg"
           }
         />
         <div

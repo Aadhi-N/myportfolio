@@ -2,7 +2,7 @@ import * as React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 import {footerIcon} from "../styles/custom.module.scss";
-import arrowUp from "../images/arrow_up.png";
+import arrowUp from "../../static/images/arrow_up.png";
 
 const Footer = () => {
   return (

@@ -8,7 +8,7 @@ portfolioItems:
   - name: "adistodo"
     index: 0
     portfolioNavTag: 1
-    icon: "/static/images/terminal_icon.png"
+    icon: ../../images/terminal_icon.png
     title: "NodeJS cli app"
     stack: "NodeJS"
     summary: "A task management app."
@@ -18,7 +18,7 @@ portfolioItems:
   - name: "lookuptime"
     index: 1
     portfolioNavTag: 1
-    icon: terminalIcon
+    icon: "../../images/terminal_icon.png"
     title: "NodeJS cli app"
     stack: "NodeJS"
     summary: "An app to check the time around the world."
@@ -28,7 +28,7 @@ portfolioItems:
   - name: "Portfolio Site"
     index: 2
     portfolioNavTag: 3
-    icon: portfolioScreenshot
+    icon: "../../images/portfoliosite_screenshot.png"
     title: "My portfolio site"
     stack: "Gatsby, Bulma, Sass"
     summary: "Website to showcase my projects."
@@ -38,7 +38,7 @@ portfolioItems:
   - name: "Chatty App"
     index: 3
     portfolioNavTag: 3
-    icon: chattyAppScreenshot
+    icon: "../../images/chattyapp_screenshot.png"
     title: "Real-time chat application"
     stack: "React, Websockets"
     summary: "Real-time chat application"
@@ -47,7 +47,7 @@ portfolioItems:
   - name: "Local Library App"
     index: 4
     portfolioNavTag: 1
-    icon: locallibraryScreenshot
+    icon: "../../images/locallibrary_screenshot1.png"
     title: "Library App"
     stack: "NodeJS"
     summary: "Online catalog for a small library"
@@ -57,7 +57,7 @@ portfolioItems:
   - name: "Vacation City"
     index: 5
     portfolioNavTag: 4
-    icon: vacationcityScreenshot
+    icon: "../../images/vacationcity_screenshot1.png"
     title: "Choose a vacation destination based on the weather"
     stack: "Angular"
     summary: "An app to choose a vacation destination based on the weather"
@@ -67,7 +67,7 @@ portfolioItems:
   - name: "E-Commerce App"
     index: 6
     portfolioNavTag: 2
-    icon: rubyScreenshot
+    icon: "../../images/ruby.png"
     title: "E-Commerce App"
     stack: "Ruby/Rails"
     summary: "An e-commerce site."

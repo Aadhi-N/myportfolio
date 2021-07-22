@@ -10,13 +10,6 @@ import PortfolioPage from './portfolio.js';
 import AboutPage from './about.js';
 import ContactPage from './contact.js';
 
-import terminalIcon from "../images/terminal_icon.png";
-import portfolioScreenshot from "../images/portfoliosite_screenshot.png";
-import chattyAppScreenshot from "../images/chattyapp_screenshot.png";
-import vacationcityScreenshot from "../images/vacationcity_screenshot1.png";
-import locallibraryScreenshot from "../images/locallibrary_screenshot1.png";
-import rubyScreenshot from "../images/ruby.png";
-
 const IndexPage = ({ data }) => {
   // define elements for active nav on scroll
   const [ref0, inView0] = useInView({
@@ -32,7 +25,7 @@ const IndexPage = ({ data }) => {
     threshold: 0.5,
   });
 
-  //Query site metadata, navbarItems using graphQL
+  //Query site metadata, navbarItems, portfolioItems using graphQL
   const query = useStaticQuery(graphql`
     query {
       site {
@@ -78,7 +71,7 @@ const IndexPage = ({ data }) => {
       }
     }
   `);
-  console.log('query', query)
+
   // Set queried data to pass as props
   const { author, description, title } = query.site.siteMetadata;
   const { navbarItems } = query.allNavbarYaml.nodes[0];

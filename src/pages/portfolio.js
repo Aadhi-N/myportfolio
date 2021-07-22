@@ -40,7 +40,6 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
   /* Render portfolio tiles */
   function getPortfolioItems() {
     if (portfolioItems) {
-
       let items = portfolioItems;
       // Function that groups every n items together
       const group = (items, n) => items.reduce((acc, currVal, currIdx) => {
@@ -52,17 +51,15 @@ const PortfolioPage = ({ref, portfolioNav, portfolioItems}) => {
       // Call group function to render tiles 
       let listItems = (
           <div>
-            {group(items, 3).map((children, index) =>
+            {group(items, 3).map((children) =>
               <div className="tile is-ancestor is-justify-content-center">
-                <p>{index}</p>
-                {children.map((item, index) =>  
-                  <a><div className={"tile is-parent" + (activeTab == item.tag || activeTab == 0 ? " " : " is-hidden")} id={portfolioTileParent}>
-                    <p>{index}</p>
-                    <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item[index])} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
+                {children.map((item) =>  
+                  <a><div className={"tile is-parent" + (activeTab == item.portfolioNavTag || activeTab == 0 ? " " : " is-hidden")} id={portfolioTileParent}>
+                    <article className="tile is-child box" id={portfolioTileChild} onMouseOver={() => handleTileHover(item.index)} onMouseLeave={handleTileHover} onClick={() => toggleModal(item)} >
                     {activeTile && activeProject == item.index ? 
                     <div className="py-5 px-3">
                       <p className="title" id={portfolioDetails}>{item.name}</p>
-                      <p className="subtitle" id={portfolioDetails}>{item.lang}</p>
+                      <p className="subtitle" id={portfolioDetails}>{item.stack}</p>
                       <p className="subtitle" id={portfolioDetails}>{item.summary}</p>
                       <div className="column" id={learnmoreBtn}>
                         <button className="button is-danger is-outlined">

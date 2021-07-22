@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {aboutContainer, aboutContent, aboutTextColumn, aboutText, aboutSubtext, aboutPic, aboutSubtitle} from "../styles/custom.module.scss";
-import profilePic from "../images/profile_pic.jpeg";
+import profilePic from "../../static/images/profile_pic.png";
 
 const AboutPage = () => {
   return (

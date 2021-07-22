@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import {modalSubtitle, modalIcon, externalLinkIcon, githubIcon, linkText} from "../styles/custom.module.scss";
 
-import github_icon from "../images/github_icon.png";
+import github_icon from "../../static/images/github_icon.png";
 
 const PortfolioModal = ({activeModal, toggleModal, modalDetails}) => {
 
