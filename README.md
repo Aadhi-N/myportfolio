@@ -6,19 +6,19 @@
 Link to site: [https://www.aadhilah.com](https://www.aadhilah.com)
 
     This portfolio site was created using:
-    - Gatsby for frontend framework
+    - Gatsby for frontend framework, using GraphQL to query data
     - Bulma for CSS framework 
     - Sass for CSS 
 
   **Description**
 
-    I created this site to showcase my projects. 
-    
-    Gatsby was chosen due to its simplicity of rendering static pages based on performance, thorough documentation, and useful plugins specifically created for the framework. 
-    
-    Bulma was used for styling, as it was quick to get started with and also has great documentation. 
+  I created this site to showcase my projects. 
+  
+  Gatsby was chosen due to its simplicity of rendering static pages based on performance, thorough documentation, and useful plugins specifically created for the framework. 
+  
+  Bulma was used for styling, as it was quick to get started with and also has great documentation. 
 
-    Hosted on Netflify.
+  Hosted on Netflify.
 
 
 #### Run project locally:
