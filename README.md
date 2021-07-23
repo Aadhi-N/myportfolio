@@ -19,6 +19,7 @@ Link to site: [https://www.aadhilah.com](https://www.aadhilah.com)
     Bulma was used for styling, as it was quick to get started with and also has great documentation. 
 
     Hosted on Netflify.
+    Includes Google Analytics for data tracking. 
 
 
 #### Run project locally:
@@ -50,4 +51,5 @@ open http://localhost:8000
 * Bulma
 * React-Intersection-Observer
 * Font Awesome
+* Google Analytics
 
