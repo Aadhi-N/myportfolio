@@ -1,7 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { useInView } from 'react-intersection-observer';
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet";
+
+import { injectGA } from "../scripts/gtag";
 
 import Layout from '../components/layout';
 import Navbar from "../components/navbar";
@@ -10,7 +12,7 @@ import PortfolioPage from './portfolio.js';
 import AboutPage from './about.js';
 import ContactPage from './contact.js';
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   // define elements for active nav on scroll
   const [ref0, inView0] = useInView({
     threshold: 0.5,
@@ -33,6 +35,7 @@ const IndexPage = ({ data }) => {
           author
           description
           title
+          gTagSrc
         }
       }
       allNavbarYaml {
@@ -73,7 +76,7 @@ const IndexPage = ({ data }) => {
   `);
 
   // Set queried data to pass as props
-  const { author, description, title } = query.site.siteMetadata;
+  const { author, description, title, gTagSrc } = query.site.siteMetadata;
   const { navbarItems } = query.allNavbarYaml.nodes[0];
   const { portfolioNav } = query.allPortfolioNavbarYaml.nodes[0];
   const { portfolioItems } = query.allPortfolioProjectsYaml.edges[0].node;
@@ -85,7 +88,9 @@ const IndexPage = ({ data }) => {
         <meta name="description" content={description}/>
         <title>{title}</title>
         <html lang="en-US" />
-        <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico"/>
+        <script async src={gTagSrc}></script>
+        <script>{injectGA()}</script>
       </Helmet>
       <Navbar 
         activeEl={[
@@ -115,3 +120,5 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
+
+

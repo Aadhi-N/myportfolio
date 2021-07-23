@@ -6,19 +6,6 @@ import Footer from "./footer.js";
 
 
 const Layout = ({children, navbarItems}) => {
-  // const navbarItemsQuery = useStaticQuery(graphql`
-  //   query NavbarItems {
-  //     allNavbarYaml {
-  //       nodes {
-  //         navbarItems {
-  //           name
-  //           index
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <main>
       <NavbarBurger navbarItemsQuery={navbarItems}/>
