@@ -15,17 +15,24 @@ import ContactPage from './contact.js';
 const IndexPage = () => {
   // define elements for active nav on scroll
   const [ref0, inView0] = useInView({
-    threshold: 0.5,
+    threshold: 0, //% of how much should come into view before triggering
   });
   const [ref1, inView1] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
   const [ref2, inView2] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
   const [ref3, inView3] = useInView({
-    threshold: 0.5,
+    threshold: 1,
   });
+
+  const activeView = () => {
+    if (inView0) { return 0 } 
+    else if (inView1 && !inView2) { return 1}
+    else if (inView2 && !inView3) { return 2}
+    else { return 3 };
+  }
 
   //Query site metadata, navbarItems, portfolioItems using graphQL
   const query = useStaticQuery(graphql`
@@ -93,26 +100,21 @@ const IndexPage = () => {
         <script>{injectGA()}</script>
       </Helmet>
       <Navbar 
-        activeEl={[
-          {inView: (typeof inView0 === 'undefined') ? false : inView0}, 
-          {inView: (typeof inView1 === 'undefined') ? false : inView1}, 
-          {inView: (typeof inView2 === 'undefined') ? false : inView2}, 
-          {inView: (typeof inView3 === 'undefined') ? false : inView3}, 
-        ]}
+        activeView={activeView()}
         navbarItems={navbarItems}/>
-      <span ref={ref0}>
+      <span ref={ref0} id="ref0">
         <Hero/>
       </span>
-      <span ref={ref1}>
+      <span ref={ref1} id="ref1">
         <PortfolioPage 
         portfolioNav={portfolioNav}
         portfolioItems={portfolioItems}>
         </PortfolioPage>
       </span>
-      <span ref={ref2}>
+      <span ref={ref2} id="ref2">
         <AboutPage/>
       </span>
-      <span ref={ref3}>
+      <span ref={ref3} id="ref3">
         <ContactPage/>
       </span>
     </Layout>

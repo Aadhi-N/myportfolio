@@ -6,12 +6,13 @@ import "../styles/bulma-custom.scss";
 import {navbar} from "../styles/custom.module.scss";
 
 
-const Navbar = ({navbarItems, activeEl}) => {
+const Navbar = ({navbarItems, activeView}) => {
+  console.log('activeView', activeView)
   //get navbar items
   function getNavItems() {
     let items = navbarItems.map((item, index) => (
         <a 
-          className={"navbar-item" + (activeEl[index].inView ? " is-active" : " ")} 
+          className={"navbar-item" + (activeView === index ? " is-active" : " ")} 
           onClick={() => {scrollTo(`#${item.name}`)}}
           >
             {item.name.charAt(0).toUpperCase()+item.name.slice(1)}

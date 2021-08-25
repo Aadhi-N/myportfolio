@@ -17,9 +17,9 @@ const PortfolioModal = ({activeModal, toggleModal, modalDetails}) => {
     <>
     {modalDetails ? 
       <div className={"modal" + (activeModal ? " is-active" : " ")}>
-        <div className="modal-background"/>
-        <button class="delete" aria-label="close" id={modalCloseBtn}></button>
+        <div className="modal-background" onClick={handleToggleChange}/>
           <div className="modal-content">
+        <button class="delete" aria-label="close" id={modalCloseBtn} onClick={handleToggleChange}></button>
             <p className="image">
               <img id={modalIcon} src={modalDetails.icon} alt="screenshot of project"/>
             </p>

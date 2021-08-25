@@ -6,7 +6,7 @@ import {contactContainer, contactTitle, socialIcons, iconEmail, iconLinkedin, ic
 import linkedinIcon from "../../static/images/linkedin_icon.png";
 import githubIcon from "../../static/images/github_contact_icon.png";
 import resumeIcon from "../../static/images/resume_icon.png";
-import resumePDF from "../../static/files/Resume.pdf";
+import resumePDF from "../../static/files/resume.pdf";
 
 const ContactPage = () => {
   return (

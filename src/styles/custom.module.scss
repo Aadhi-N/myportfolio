@@ -453,6 +453,14 @@ $hot-pink: hsl(350, 68%, 60%);
 
 };
 
+#modal-close-btn {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  margin: 10px;
+  padding: 15px;
+}
+
 #modal-subtitle {
   border-bottom: 1px solid $medium-grey;
 };

@@ -42,6 +42,11 @@ gatsby develop
 open http://localhost:8000
 ```
 
+Open graphiQ IDE for graphQL:
+```
+http://localhost:8000/___graphql
+```
+
 
 ### Dependencies
 
